@@ -1,0 +1,60 @@
+html {
+  background-color: #fae3d9; }
+
+.header {
+  background-color: #fae3d9;
+  text-align: center; }
+  .header .title {
+    font-family: 'Lacquer', sans-serif;
+    font-size: 80px;
+    color: #ffb6b9; }
+  .header .subTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #ffb6b9;
+    margin-bottom: 0; }
+
+.content {
+  background-color: #fae3d9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #bbded6; }
+  .content a {
+    color: #8ac6d1;
+    font-size: 30px; }
+  .content a:hover {
+    color: #8ac6d1; }
+
+.addTasks {
+  background-color: #fae3d9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  align-items: center;
+  text-align: center; }
+  .addTasks input {
+    background-color: #ffb6b9;
+    border-style: none;
+    color: #fae3d9; }
+  .addTasks ::placeholder {
+    color: #fae3d9; }
+  .addTasks button {
+    border-style: none;
+    color: #fae3d9;
+    background-color: #ffb6b9; }
+
+.page {
+  background-color: #fae3d9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #ffb6b9; }
+  .page a {
+    color: #ffb6b9;
+    font-size: 30px; }
+  .page a:hover {
+    color: #ffb6b9; }
+
+footer {
+  background-color: #fae3d9;
+  text-align: center; }

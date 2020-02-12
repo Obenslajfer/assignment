@@ -1,0 +1,13 @@
+<%- include("partial/header.ejs") %>
+
+
+<form action="/update/:id"  method="Post">
+
+ <input type="text" name="text" id="" value="<%=response.text%>" required>
+ <input type="text" name="author" id="" value="<%=response.author%>" required>
+
+<input type="text" name="_id" value="<%=response._id%>" hidden>
+<button type="submit">Update</button>
+
+</form>
+<%- include("partial/footer.ejs") %>
