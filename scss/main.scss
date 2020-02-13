@@ -1,4 +1,4 @@
-$titlFont: 'Lacquer', sans-serif;
+$titleFont: 'Lacquer', sans-serif;
 $textFont: 'Montserrat', sans-serif;
 $primColor: #fae3d9;
 $secColor: #ffb6b9;
@@ -15,12 +15,12 @@ html{
   background-color: $primColor;
     text-align: center;
       .title{
-        font-family: 'Lacquer', sans-serif;
+        font-family: $titleFont;
         font-size: 80px;
         color: $secColor;
       }
       .subTitle{
-        font-family: 'Montserrat', sans-serif;
+        font-family: $textFont;
         font-size: 60px;
         color: $secColor;
         margin-bottom: 0;
@@ -29,7 +29,7 @@ html{
 
 .content{
   background-color: $primColor;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $textFont;
   font-size: 40px;
   text-align: center;
   color: $TaskColor;
@@ -44,7 +44,7 @@ html{
 
 .addTasks{
   background-color: $primColor;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $textFont;
   font-size: 30px;
   align-items: center;
   text-align: center;
@@ -66,7 +66,7 @@ html{
 
 .page{
   background-color: $primColor;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $textFont;
   font-size: 40px;
   text-align: center;
   color: $secColor;
