@@ -5,18 +5,18 @@ html {
   background-color: #fae3d9;
   text-align: center; }
   .header .title {
-    font-family: 'Lacquer', sans-serif;
+    font-family: "Lacquer", sans-serif;
     font-size: 80px;
     color: #ffb6b9; }
   .header .subTitle {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 60px;
     color: #ffb6b9;
     margin-bottom: 0; }
 
 .content {
   background-color: #fae3d9;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   text-align: center;
   color: #bbded6; }
@@ -28,7 +28,7 @@ html {
 
 .addTasks {
   background-color: #fae3d9;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   align-items: center;
   text-align: center; }
@@ -45,7 +45,7 @@ html {
 
 .page {
   background-color: #fae3d9;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   text-align: center;
   color: #ffb6b9; }
