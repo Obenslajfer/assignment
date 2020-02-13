@@ -3,9 +3,8 @@ const Task = require("../model/task")
 
 const router = express.Router();
 
-
+// Setting up a task following the rules applied.
 router.post("/createtask", async (req, res) => {
-
   const task = new Task({
     todo: req.body.todo,
     priority: req.body.priority
@@ -14,12 +13,13 @@ router.post("/createtask", async (req, res) => {
     if (error) {
       console.log(error);
       res.send("Too few letters")
-    } else
+    }
+    else
       res.redirect("/task")
-
   });
 })
 
+//redering the tasks shown on the /task page.
 const items = 3;
 router.get("/task", async (req, res) => {
 
@@ -34,7 +34,7 @@ router.get("/task", async (req, res) => {
   });
 
 })
-
+// setting up a route able to take in the specified id for that task, then deleting it
 router.get("/delete/:id", async (req, res) => {
   await Task.deleteOne({
     _id: req.params.id
@@ -43,6 +43,7 @@ router.get("/delete/:id", async (req, res) => {
   res.redirect("/task")
 })
 
+// rendering the edit page, to change an exising task
 router.get("/update/:id", async (req, res) => {
 
   const response = await Task.findById({
@@ -51,7 +52,7 @@ router.get("/update/:id", async (req, res) => {
 
   res.render("edit", {response})
 })
-
+// setting up a route able to take in the specified id for that task, then updating it
 router.post("/update/:id", async (req, res) => {
 
   await Task.updateOne({_id: req.body._id}, {
