@@ -19,22 +19,23 @@
   <div class="container-fluid content">
     <div class="row">
       <% tasks.forEach( (task)=>{ %>
-      <div class="col">
-        <div><%= task.text %></div>
+      <div class="col-3">
+        <div><%= task.todo %></div>
       </div>
-      <div class="col">
-        <div><%= task.author %></div>
+      <div class="col-3">
+        <div><%= task.priority %></div>
       </div>
 
 
-      <div class="col">
+      <div class="col-3">
         <a href="/update/<%=task._id%>">UPDATE</a>
       </div>
-      <div class="col">
+      <div class="col-3">
         <a href="/delete/<%=task._id%>">DELETE</a>
       </div>
-  </div>
+
     <%  }) %>
+      </div>
   </div>
 
 
@@ -42,8 +43,8 @@
   <div class="addTasks">
     <form action="/createtask" method="post">
 
-      <input type="text" name="text" id="" placeholder="Task">
-      <input type="text" name="author" id="" placeholder="Priority">
+      <input type="text" name="todo" id="" placeholder="Task">
+      <input type="text" name="priority" id="" placeholder="Priority">
       <button type="submit">ADD</button>
 
     </form>
@@ -54,4 +55,5 @@
     <a href="/task/?page=2"> 2 </a>
   </div>
 
-  <%- include("partial/footer.ejs") %>
+</body>
+</html>

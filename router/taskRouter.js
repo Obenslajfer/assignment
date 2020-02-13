@@ -9,8 +9,8 @@ router.post("/createtask", async (req, res)=>
 
     //req.body.allanameproperties
 const task = new Task({
-        text: req.body.text,
-        author:req.body.author
+        todo: req.body.todo,
+        priority:req.body.priority
     })
  await task.save( (error, success)=>{
      if(error) {
@@ -26,7 +26,7 @@ const task = new Task({
 const items = 3;
 router.get("/task", async (req, res) => {
 // const sorted = req.query.sort
-// .find().sort({author:sorted}); detta ska sättas efter rad 47
+// .find().sort({priority:sorted}); detta ska sättas efter rad 47
 const page = req.query.page;
 const tasks = await Task
 .find()
@@ -57,7 +57,7 @@ router.get("/update/:id",async (req, res)=>{
 router.post("/update/:id", async (req, res)=>{
 //använd updateOne metoden för att kunna redigera task
   await Task.updateOne({_id:req.body._id},
-  {$set: {text: req.body.text, author:req.body.author}}, {runValidators:true})
+  {$set: {todo: req.body.todo, priority:req.body.priority}}, {runValidators:true})
   res.redirect("/task");
 
 

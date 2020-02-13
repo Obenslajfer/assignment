@@ -1,79 +1,85 @@
+$titlFont: 'Lacquer', sans-serif;
+$textFont: 'Montserrat', sans-serif;
+$primColor: #fae3d9;
+$secColor: #ffb6b9;
+$linkColor: #8ac6d1;
+$TaskColor: #bbded6;
 
 html{
-  background-color: #fae3d9;
+  background-color: $primColor;
 }
 
 
 .header{
 
-  background-color: #fae3d9;
+  background-color: $primColor;
     text-align: center;
       .title{
         font-family: 'Lacquer', sans-serif;
         font-size: 80px;
-        color: #ffb6b9;
+        color: $secColor;
       }
       .subTitle{
         font-family: 'Montserrat', sans-serif;
         font-size: 60px;
-        color: #ffb6b9;
+        color: $secColor;
         margin-bottom: 0;
       }
 }
 
 .content{
-  background-color: #fae3d9;
+  background-color: $primColor;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   text-align: center;
-  color: #bbded6;
+  color: $TaskColor;
     a{
-      color: #8ac6d1;
+      color: $linkColor;
       font-size: 30px;
     }
     a:hover{
-      color: #8ac6d1;
+      color: $linkColor;
     }
 }
 
 .addTasks{
-  background-color: #fae3d9;
+  background-color: $primColor;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   align-items: center;
   text-align: center;
     input{
-      background-color:#ffb6b9;
+      background-color:$secColor;
       border-style: none;
-      color: #fae3d9;
+      color: $primColor;
     }
     ::placeholder{
-      color: #fae3d9;
+      color: $primColor;
     }
     button{
       border-style: none;
-      color: #fae3d9;
-      background-color:#ffb6b9;
+      color: $primColor;
+      background-color:$secColor;
     }
 
 }
 
 .page{
-  background-color: #fae3d9;
+  background-color: $primColor;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   text-align: center;
-  color: #ffb6b9;
+  color: $secColor;
     a{
-      color: #ffb6b9;
+      color: $secColor;
       font-size: 30px;
     }
     a:hover{
-      color: #ffb6b9;
+      color: $secColor;
     }
 }
 
 footer{
-  background-color: #fae3d9;
+  background-color: $primColor;
   text-align: center;
 }
