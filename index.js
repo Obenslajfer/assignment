@@ -6,7 +6,7 @@ const config = require("./config/config");
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
 const app = express();
-
+ 
 //middleware
 app.use(express.urlencoded({extended:true}))
 
