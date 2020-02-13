@@ -1,7 +1,7 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const commentRouter = require("./router/commentRouter");
+const taskRouter = require("./router/taskRouter");
 const config = require("./config/config");
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
@@ -23,11 +23,11 @@ app.set("view engine", "ejs");
  //en till middleware för css
 
  //router
-app.use(commentRouter);
+app.use(taskRouter);
 
 
 //listen to port
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3040;
 const options ={
     useUnifiedTopology: true,
     useNewUrlParser: true

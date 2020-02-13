@@ -18,20 +18,20 @@
 
   <div class="container-fluid content">
     <div class="row">
-      <% comments.forEach( (comment)=>{ %>
+      <% tasks.forEach( (task)=>{ %>
       <div class="col">
-        <div><%= comment.text %></div>
+        <div><%= task.text %></div>
       </div>
       <div class="col">
-        <div><%= comment.author %></div>
+        <div><%= task.author %></div>
       </div>
 
 
       <div class="col">
-        <a href="/update/<%=comment._id%>">UPDATE</a>
+        <a href="/update/<%=task._id%>">UPDATE</a>
       </div>
       <div class="col">
-        <a href="/delete/<%=comment._id%>">DELETE</a>
+        <a href="/delete/<%=task._id%>">DELETE</a>
       </div>
   </div>
     <%  }) %>
@@ -40,7 +40,7 @@
 
 
   <div class="addTasks">
-    <form action="/createcomment" method="post">
+    <form action="/createtask" method="post">
 
       <input type="text" name="text" id="" placeholder="Task">
       <input type="text" name="author" id="" placeholder="Priority">
@@ -50,8 +50,8 @@
 
   </div>
   <div class="page">
-    <a href="/comment/?page=1"> 1 </a>
-    <a href="/comment/?page=2"> 2 </a>
+    <a href="/task/?page=1"> 1 </a>
+    <a href="/task/?page=2"> 2 </a>
   </div>
 
   <%- include("partial/footer.ejs") %>

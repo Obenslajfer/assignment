@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-const schemaComment = new mongoose.Schema(
+const schemaTask = new mongoose.Schema(
     {
         text: {type:String, required:true, minlength:5},
         date: { type: Date,  default: Date.now },
@@ -9,6 +9,6 @@ const schemaComment = new mongoose.Schema(
     }
 )
 
-const Comment = mongoose.model("Comment", schemaComment);
+const Task = mongoose.model("Task", schemaTask);
 
-module.exports = Comment;
+module.exports = Task;
