@@ -7,7 +7,6 @@ const router = express.Router();
 router.post("/createtask", async (req, res)=>
 {
 
-    //req.body.allanameproperties
 const task = new Task({
         todo: req.body.todo,
         priority:req.body.priority
@@ -25,8 +24,7 @@ const task = new Task({
 
 const items = 3;
 router.get("/task", async (req, res) => {
-// const sorted = req.query.sort
-// .find().sort({priority:sorted}); detta ska sättas efter rad 47
+
 const page = req.query.page;
 const tasks = await Task
 .find()
@@ -40,22 +38,20 @@ const tasks = await Task
 router.get("/delete/:id", async (req, res)=>{
     console.log(req.params.id);
     await Task.deleteOne({_id:req.params.id});
-    //res.send("It works");
+
     res.redirect("/task")
 })
-//fråga varför har vi inte använt post request för delete?
 
-// router
 router.get("/update/:id",async (req, res)=>{
-  //vill hämta bara en data från databas
+
   const response = await Task.findById({_id:req.params.id});
   console.log(response)
-  //sen skicka den till edit sidan
+
   res.render("edit", {response})
 })
 
 router.post("/update/:id", async (req, res)=>{
-//använd updateOne metoden för att kunna redigera task
+
   await Task.updateOne({_id:req.body._id},
   {$set: {todo: req.body.todo, priority:req.body.priority}}, {runValidators:true})
   res.redirect("/task");
