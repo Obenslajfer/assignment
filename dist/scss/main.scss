@@ -1,0 +1,84 @@
+$titleFont: 'Lacquer', sans-serif;
+$textFont: 'Montserrat', sans-serif;
+$primColor: #fae3d9;
+$secColor: #ffb6b9;
+$linkColor: #8ac6d1;
+$TaskColor: #bbded6;
+
+html{
+  background-color: $primColor;
+}
+
+
+.header{
+  background-color: $primColor;
+    text-align: center;
+      .title{
+        font-family: $titleFont;
+        font-size: 80px;
+        color: $secColor;
+      }
+      .subTitle{
+        font-family: $textFont;
+        font-size: 60px;
+        color: $secColor;
+        margin-bottom: 0;
+      }
+}
+
+.content{
+  background-color: $primColor;
+  font-family: $textFont;
+  font-size: 40px;
+  text-align: center;
+  color: $TaskColor;
+    a{
+      color: $linkColor;
+      font-size: 30px;
+    }
+    a:hover{
+      color: $linkColor;
+    }
+}
+
+.addTasks{
+  background-color: $primColor;
+  font-family: $textFont;
+  font-size: 30px;
+  align-items: center;
+  text-align: center;
+    input{
+      background-color:$secColor;
+      border-style: none;
+      color: $primColor;
+    }
+    ::placeholder{
+      color: $primColor;
+    }
+    button{
+      border-style: none;
+      color: $primColor;
+      background-color:$secColor;
+    }
+
+}
+
+.page{
+  background-color: $primColor;
+  font-family: $textFont;
+  font-size: 40px;
+  text-align: center;
+  color: $secColor;
+    a{
+      color: $secColor;
+      font-size: 30px;
+    }
+    a:hover{
+      color: $secColor;
+    }
+}
+
+footer{
+  background-color: $primColor;
+  text-align: center;
+}
