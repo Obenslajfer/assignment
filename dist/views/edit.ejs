@@ -1,0 +1,17 @@
+<%- include("partial/header.ejs") %>
+
+<div class="addTasks">
+
+
+<form action="/update/:id"  method="Post">
+
+ <input type="text" name="todo" id="" value="<%=response.todo%>" required>
+ <input type="text" name="priority" id="" value="<%=response.priority%>" required>
+
+<input type="text" name="_id" value="<%=response._id%>" hidden>
+<button type="submit">Update</button>
+
+</form>
+</div>
+</body>
+</html>
