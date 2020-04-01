@@ -6,7 +6,8 @@
     "node": "v10.16.3"
   },
   "scripts": {
-    "new": "npm i express mongoose ejs node-sass-middleware"
+    "new": "npm i express mongoose ejs node-sass-middleware",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Pontus Bovin",
