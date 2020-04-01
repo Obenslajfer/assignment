@@ -1,0 +1,25 @@
+{
+  "name": "assignmentone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "v10.16.3"
+  },
+  "scripts": {
+    "new": "npm i express mongoose ejs node-sass-middleware"
+  },
+  "keywords": [],
+  "author": "Pontus Bovin",
+  "license": "ISC",
+  "description": "To do list",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11",
+    "node-sass-middleware": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
