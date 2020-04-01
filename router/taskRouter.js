@@ -3,6 +3,11 @@ const Task = require("../model/task")
 
 const router = express.Router();
 
+
+
+router.get("/", (req, res) => {
+  res.send("hello !")
+})
 // Setting up a task following the rules applied.
 router.post("/createtask", async (req, res) => {
   const task = new Task({
