@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get("/", (req, res) => {
-  res.send("hello !")
+  res.redirect("/createtask")
 })
 // Setting up a task following the rules applied.
 router.post("/createtask", async (req, res) => {
