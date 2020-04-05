@@ -4,10 +4,6 @@ const Task = require("../model/task")
 const router = express.Router();
 
 
-
-router.get("/", (req, res) => {
-  res.redirect("/createtask")
-})
 // Setting up a task following the rules applied.
 router.post("/createtask", async (req, res) => {
   const task = new Task({
@@ -20,13 +16,13 @@ router.post("/createtask", async (req, res) => {
       res.send("Too few letters")
     }
     else
-      res.redirect("/task")
+      res.redirect("/")
   });
 })
 
 //redering the tasks shown on the /task page.
 const items = 3;
-router.get("/task", async (req, res) => {
+router.get("/", async (req, res) => {
 
   const page = req.query.page;
   const tasks = await Task
@@ -45,7 +41,7 @@ router.get("/delete/:id", async (req, res) => {
     _id: req.params.id
   });
 
-  res.redirect("/task")
+  res.redirect("/")
 })
 
 // rendering the edit page, to change an exising task
@@ -69,7 +65,7 @@ router.post("/update/:id", async (req, res) => {
   }, {
     runValidators: true
   })
-  res.redirect("/task");
+  res.redirect("/");
 
 
 })
